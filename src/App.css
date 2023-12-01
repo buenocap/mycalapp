@@ -19,6 +19,9 @@
 }
 .task-input {
   grid-area: taskInput;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .task {
@@ -40,11 +43,15 @@
 footer {
   grid-area: footer;
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 header {
   grid-area: header;
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 li {
