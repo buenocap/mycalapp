@@ -41,6 +41,11 @@
 
 .calendar-header {
   text-align: center;
+  color: orange;
+}
+
+.calendar-month {
+  border-bottom: 1px lightgrey solid;
 }
 
 .progressBar {

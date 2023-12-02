@@ -6,7 +6,7 @@ export default function TaskItem({ task }) {
       </form>
       {task.taskDate ? (
         <li>
-          <h3>{task.taskName}</h3> Due {task.taskDate} at {task.taskTime}
+          <h4>{task.taskName}</h4> Due {task.taskDate} at {task.taskTime}
         </li>
       ) : (
         <li>
