@@ -8,21 +8,21 @@
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-template-columns: auto;
   grid-template-areas:
-    "header header header header header"
-    "taskInput taskInput taskInput taskInput taskInput"
-    "task task . calendar calendar"
-    "task task . calendar calendar"
-    "task task . . ."
-    "task task . progressBar progressBar"
-    "footer footer footer footer footer";
+    "header header header header"
+    ". taskInput taskInput ."
+    ". task  openTask ."
+    ". task  openTask ."
+    ". task progressBar ."
+    "footer footer footer footer";
   gap: 10px;
 }
 .task-input {
   grid-area: taskInput;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0 0 10px 0;
+  gap: 1rem;
 }
 
 .task {
@@ -41,21 +41,22 @@
   color: grey;
 }
 
-.calendar {
-  grid-area: calendar;
+.open-task {
+  grid-area: openTask;
+  display: flex;
+  justify-content: center;
 }
 
-.calendar-header {
-  text-align: center;
-  color: orange;
-}
-
-.calendar-month {
-  border-bottom: 1px lightgrey solid;
+.card-container {
+  height: 100px;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
 }
 
 .progressBar {
   grid-area: progressBar;
+  text-align: center;
 }
 
 footer {

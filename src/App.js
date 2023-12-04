@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Calendar from "react-calendar";
 import CompletionProgress from "./CompletionProgress";
 import TaskList from "./TaskList";
 import TaskInput from "./TaskInput";
-import "react-calendar/dist/Calendar.css";
+import OpenTask from "./OpenTask";
 
 export default function App() {
   const [task, setTask] = useState("");
@@ -31,7 +30,7 @@ export default function App() {
         onTaskObject={handleTaskObject}
       />
       <TaskList tasks={taskObject} />
-      <Calendar className="calendar" />
+      <OpenTask />
       <CompletionProgress
         taskList={taskObject}
         onTaskObject={handleTaskObject}
