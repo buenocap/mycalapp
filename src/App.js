@@ -7,12 +7,20 @@ import OpenTask from "./OpenTask";
 
 export default function App() {
   const [task, setTask] = useState("");
-  const [taskDueDate, setTaskDueDate] = useState(null);
-  const [taskDueTime, setTaskDueTime] = useState(null);
+  const [taskDueDate, setTaskDueDate] = useState("");
+  const [taskDueTime, setTaskDueTime] = useState("");
   const [taskObject, setTaskObject] = useState([]);
 
   function handleTaskObject(newItem) {
     setTaskObject((currentTaskList) => [...currentTaskList, newItem]);
+  }
+
+  function handleTaskToggle(id) {
+    setTaskObject((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, taskComplete: !task.taskComplete } : task
+      )
+    );
   }
 
   return (
@@ -29,8 +37,8 @@ export default function App() {
         setTaskDueTime={setTaskDueTime}
         onTaskObject={handleTaskObject}
       />
-      <TaskList tasks={taskObject} />
-      <OpenTask />
+      <TaskList tasks={taskObject} onTaskToggle={handleTaskToggle} />
+      {/* <OpenTask /> */}
       <CompletionProgress
         taskList={taskObject}
         onTaskObject={handleTaskObject}

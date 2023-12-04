@@ -10,9 +10,9 @@
   grid-template-areas:
     "header header header header"
     ". taskInput taskInput ."
-    ". task  openTask ."
-    ". task  openTask ."
-    ". task progressBar ."
+    ". task  task ."
+    ". task  task ."
+    ". progressBar progressBar ."
     "footer footer footer footer";
   gap: 10px;
 }
@@ -27,6 +27,8 @@
 
 .task {
   grid-area: task;
+  display: flex;
+  justify-content: center;
 }
 
 .task-item {
@@ -42,7 +44,6 @@
 }
 
 .open-task {
-  grid-area: openTask;
   display: flex;
   justify-content: center;
 }

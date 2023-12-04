@@ -1,25 +1,22 @@
-import { useState } from "react";
-
-export default function TaskItem({ task }) {
-  const [isDone, setIsDone] = useState(false);
-
-  function handleIsDone() {
-    setIsDone(!isDone);
-  }
+export default function TaskItem({ task, onTaskToggle }) {
   return (
     <div className="task-item">
-      <form>
-        <input type="checkbox" onChange={(e) => handleIsDone(e.target.value)} />
-      </form>
+      <input
+        type="checkbox"
+        value={task.taskComplete}
+        onChange={() => onTaskToggle(task.id)}
+      />
       {task.taskDate ? (
-        <li className={isDone ? "strike" : ""} key={task.taskName}>
-          <h4>{task.taskName}</h4> Due {task.taskDate} at {task.taskTime}
+        <li className={task.taskComplete ? "strike" : ""} key={task.id}>
+          <h4>{task.taskName}</h4>
         </li>
       ) : (
-        <li className={isDone ? "strike" : ""}>
+        <li className={task.taskComplete ? "strike" : ""} key={task.id}>
           <h3>{task.taskName}</h3>
         </li>
       )}
     </div>
   );
 }
+
+//Due {task.taskDate} at {task.taskTime}
