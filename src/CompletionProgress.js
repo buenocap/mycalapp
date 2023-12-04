@@ -1,7 +1,7 @@
-export default function CompletionProgress() {
+export default function CompletionProgress({ taskList, onTaskObject }) {
   return (
     <div className="progressBar">
-      <p>Hello this is the completetion progress view</p>
+      <p>{`You have currently completed X out of X tasks 🤩`}</p>
     </div>
   );
 }

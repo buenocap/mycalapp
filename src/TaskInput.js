@@ -8,6 +8,7 @@ export default function TaskInput(props) {
       taskName: props.task,
       taskDate: props.taskDueDate,
       taskTime: props.taskDueTime,
+      taskComplete: false,
     };
 
     props.setTask("");
