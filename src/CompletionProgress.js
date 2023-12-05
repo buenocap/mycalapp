@@ -1,3 +1,7 @@
+/** Completion Progress: Keeps track of how many tasks a user has checked off as completed and relays that information
+ * to the user with the addition of some whimsical comments based on the users current progress with their current list of tasks.
+ */
+
 export default function CompletionProgress({ taskList }) {
   if (!taskList.length) {
     return (

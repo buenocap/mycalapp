@@ -43,6 +43,10 @@
   color: grey;
 }
 
+button {
+  padding: 2px;
+}
+
 .open-task {
   display: flex;
   justify-content: center;
