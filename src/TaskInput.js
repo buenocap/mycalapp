@@ -13,6 +13,7 @@ export default function TaskInput(props) {
       taskName: props.task,
       taskDate: props.taskDueDate,
       taskTime: props.taskDueTime,
+      taskNote: "Click edit to add a note.",
       taskComplete: false,
       id: Date.now(),
     };

@@ -20,7 +20,7 @@ export default function CompletionProgress({ taskList }) {
       {percentage === 100 ? (
         <p>You've completed all your tasks! 😎 Time for a break 😴</p>
       ) : (
-        <p>{`You have currently completed ${numCompleted} out of ${numTasks} tasks 🤩`}</p>
+        <p>{`You have currently completed ${numCompleted} out of ${numTasks} tasks 🤓`}</p>
       )}
     </div>
   );

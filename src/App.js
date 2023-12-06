@@ -3,7 +3,6 @@ import "./App.css";
 import CompletionProgress from "./CompletionProgress";
 import TaskList from "./TaskList";
 import TaskInput from "./TaskInput";
-import OpenTask from "./OpenTask";
 
 export default function App() {
   const [task, setTask] = useState("");
@@ -23,6 +22,21 @@ export default function App() {
     );
   }
 
+  function handleTaskDelete(id) {
+    setTaskObject((tasks) => tasks.filter((task) => task.id !== id));
+  }
+
+  function handleNewNote(id, newNote) {
+    if (newNote.length === 0) {
+      newNote = " ";
+    }
+    setTaskObject((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, taskNote: newNote } : task
+      )
+    );
+  }
+
   return (
     <div className="container">
       <header>
@@ -37,7 +51,12 @@ export default function App() {
         setTaskDueTime={setTaskDueTime}
         onTaskObject={handleTaskObject}
       />
-      <TaskList tasks={taskObject} onTaskToggle={handleTaskToggle} />
+      <TaskList
+        tasks={taskObject}
+        onTaskToggle={handleTaskToggle}
+        onTaskDelete={handleTaskDelete}
+        onNewNote={handleNewNote}
+      />
       {/* <OpenTask /> */}
       <CompletionProgress
         taskList={taskObject}
