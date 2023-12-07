@@ -39,9 +39,6 @@ export default function App() {
 
   return (
     <div className="container">
-      <header>
-        <p>Header</p>
-      </header>
       <TaskInput
         task={task}
         setTask={setTask}
@@ -62,9 +59,6 @@ export default function App() {
         taskList={taskObject}
         onTaskObject={handleTaskObject}
       />
-      <footer>
-        <p>Footer</p>
-      </footer>
     </div>
   );
 }

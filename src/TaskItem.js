@@ -41,7 +41,11 @@ export default function TaskItem({
           <li className={task.taskComplete ? "strike" : ""} key={task.id}>
             <h3>{task.taskName}</h3>
           </li>
-          <button onClick={handleIsOpen} title={isOpen ? "Close" : "Open"}>
+          <button
+            onClick={handleIsOpen}
+            title={isOpen ? "Close" : "Open"}
+            className="task-button"
+          >
             {isOpen ? <FaChevronDown /> : <FaChevronRight />}
           </button>
         </div>
@@ -62,14 +66,20 @@ export default function TaskItem({
               {task.taskNote && (
                 <div>
                   <h4>Notes:</h4>
-                  <p>{task.taskNote}</p>
+                  <p className="note-text">{task.taskNote}</p>
                   {editInterface && (
                     <form onSubmit={handleNoteSubmit} className="new-note">
-                      <input
-                        type="text"
-                        placeholder="Enter note..."
-                        onChange={(e) => onNewNote(task.id, e.target.value)}
-                      />
+                      <label>
+                        Edit Note:
+                        <textarea
+                          value={task.taskNote}
+                          onChange={(e) => onNewNote(task.id, e.target.value)}
+                          cols={25}
+                          rows={5}
+                        />
+                      </label>
+                      <hr />
+                      <button type="submit">Save Note</button>
                     </form>
                   )}
                 </div>
