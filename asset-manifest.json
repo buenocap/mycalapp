@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mycalapp/static/css/main.df481c42.css",
+    "main.js": "/mycalapp/static/js/main.8f8407db.js",
+    "static/media/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg": "/mycalapp/static/media/yuriy-kovalev-nN1HSDtKdlw-unsplash.0acaa83768131db939a2.jpg",
+    "index.html": "/mycalapp/index.html",
+    "main.df481c42.css.map": "/mycalapp/static/css/main.df481c42.css.map",
+    "main.8f8407db.js.map": "/mycalapp/static/js/main.8f8407db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df481c42.css",
+    "static/js/main.8f8407db.js"
+  ]
+}
