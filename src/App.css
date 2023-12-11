@@ -184,3 +184,7 @@ input {
   border: none;
   margin: 2px;
 }
+
+textarea {
+  padding: 5px;
+}
