@@ -38,27 +38,29 @@ export default function App() {
   }
 
   return (
-    <div className="container">
-      <TaskInput
-        task={task}
-        setTask={setTask}
-        taskDueDate={taskDueDate}
-        setTaskDueDate={setTaskDueDate}
-        taskDueTime={taskDueTime}
-        setTaskDueTime={setTaskDueTime}
-        onTaskObject={handleTaskObject}
-      />
-      <TaskList
-        tasks={taskObject}
-        onTaskToggle={handleTaskToggle}
-        onTaskDelete={handleTaskDelete}
-        onNewNote={handleNewNote}
-      />
-      {/* <OpenTask /> */}
-      <CompletionProgress
-        taskList={taskObject}
-        onTaskObject={handleTaskObject}
-      />
+    <div className="center-page">
+      <div className="container">
+        <TaskInput
+          task={task}
+          setTask={setTask}
+          taskDueDate={taskDueDate}
+          setTaskDueDate={setTaskDueDate}
+          taskDueTime={taskDueTime}
+          setTaskDueTime={setTaskDueTime}
+          onTaskObject={handleTaskObject}
+        />
+        <TaskList
+          tasks={taskObject}
+          onTaskToggle={handleTaskToggle}
+          onTaskDelete={handleTaskDelete}
+          onNewNote={handleNewNote}
+        />
+        {/* <OpenTask /> */}
+        <CompletionProgress
+          taskList={taskObject}
+          onTaskObject={handleTaskObject}
+        />
+      </div>
     </div>
   );
 }
