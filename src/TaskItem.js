@@ -55,7 +55,7 @@ export default function TaskItem({
             <div className="detailedview-contents">
               <div className="detailedview-date">
                 <h4>Due Date:</h4>
-                <p>{task.taskDate ? task.taskTime : "N/A"}</p>
+                <p>{task.taskDate ? task.taskDate : "N/A"}</p>
               </div>
               <div className="detailedview-time">
                 <h4>Time Due:</h4>
